@@ -198,25 +198,6 @@ npms=(
   n
 )
 
-gpg_key='2E488C14E83923DB08CF7DA9F12A89085CFDE733'
-git_email='mkitzmann@gmail.com'
-git_configs=(
-  "branch.autoSetupRebase always"
-  "color.ui auto"
-  "core.autocrlf input"
-  "credential.helper osxkeychain"
-  "merge.ff false"
-  "pull.rebase true"
-  "push.default simple"
-  "rebase.autostash true"
-  "rerere.autoUpdate true"
-  "remote.origin.prune true"
-  "rerere.enabled true"
-  "user.name mkitzmann"
-  "user.email ${git_email}"
-  "user.signingkey ${gpg_key}"
-)
-
 vscode=(
   alanz.vscode-hie-server
   rebornix.Ruby
@@ -258,6 +239,7 @@ fonts=(
   font-montserrat
   font-lato
   font-dosis
+  font-hack-nerd-font
 )
 
 ######################################## End of app list ########################################
@@ -327,20 +309,6 @@ install 'brew cask install' "${important_casks[@]}"
 prompt "Install packages"
 install 'brew_install_or_upgrade' "${brews[@]}"
 brew link --overwrite ruby
-
-prompt "Set git defaults"
-for config in "${git_configs[@]}"
-do
-  git config --global ${config}
-done
-
-if [[ -z "${CI}" ]]; then
-  gpg --keyserver hkp://pgp.mit.edu --recv ${gpg_key}
-  prompt "Export key to Github"
-  ssh-keygen -t rsa -b 4096 -C ${git_email}
-  pbcopy < ~/.ssh/id_rsa.pub
-  open https://github.com/settings/ssh/new
-fi  
 
 prompt "Upgrade bash"
 brew install bash bash-completion2 fzf
