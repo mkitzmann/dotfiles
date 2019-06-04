@@ -78,7 +78,13 @@ brews=(
   youtube-dl
   librsvg
   zsh
-  oh-my-zsh
+  zsh-history-substring-search
+  zsh-lovers
+  zsh-autosuggestions
+  zsh-navigation-tools
+  zsh-completions
+  zsh-syntax-highlighting
+  zsh-git-prompt
   openssh
   php
   gmp
@@ -318,9 +324,9 @@ sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
 touch ~/.bash_profile #see https://github.com/twolfson/sexy-bash-prompt/issues/51
 (cd /tmp && git clone --depth 1 --config core.autocrlf=false https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
 
-prompt "Setting up xonsh"
-sudo bash -c "which xonsh >> /private/etc/shells"
-sudo chsh -s $(which xonsh)
+#prompt "Setting up xonsh"
+#sudo bash -c "which xonsh >> /private/etc/shells"
+#sudo chsh -s $(which xonsh)
 
 prompt "Install software"
 install 'brew cask install' "${casks[@]}"
@@ -330,7 +336,7 @@ install 'pip3 install --upgrade' "${pips[@]}"
 install 'gem install' "${gems[@]}"
 install 'npm install --global' "${npms[@]}"
 install 'code --install-extension' "${vscode[@]}"
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 install 'brew cask install' "${fonts[@]}"
 
 prompt "Update packages"
@@ -342,8 +348,14 @@ if [[ -z "${CI}" ]]; then
   mas list
 fi
 
-prompt "Link Alfred"
-brew cask alfred link
+#prompt "Link Alfred"
+#brew cask alfred link
+
+prompt "Install oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+prompt "Change default shell to zsh"
+chsh -s $(which zsh)
 
 prompt "Cleanup"
 brew cleanup

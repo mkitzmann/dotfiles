@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 
@@ -9,6 +11,12 @@ git_configs=(
   "user.email ${git_email}"
   "user.signingkey ${gpg_key}"
 )
+
+function prompt {
+  if [[ -z "${CI}" ]]; then
+    read -p "Hit Enter to $1 ..."
+  fi
+}
 
 prompt "Set git credentials"
 for config in "${git_configs[@]}"
@@ -22,4 +30,4 @@ if [[ -z "${CI}" ]]; then
   ssh-keygen -t rsa -b 4096 -C ${git_email}
   pbcopy < ~/.ssh/id_rsa.pub
   open https://github.com/settings/ssh/new
-fi  
+fi

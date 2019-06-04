@@ -1,0 +1,59 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "window.fullScreenZenMode": false,
+    "editor.tabSize": 2,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontWeight": 400,
+    "editor.lineHeight": 24,
+    "editor.wordWrap": true,
+    "editor.renderIndentGuides": true,
+    "editor.renderWhitespace": "boundary",
+    "eslint.autoFixOnSave": true,
+    "eslint.run": "onSave",
+    "files.associations": {
+        "*.vue": "vue"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.scssc": true,
+        "**/*.cssc": true,
+        "**/db.json": true,
+        "**/*.min.*": true,
+        "**/*.log.*": true,
+        "**/dist": true,
+        "**/tmp": true,
+        "**/cache": true,
+        "**/test_assets": true,
+        "**/node_modules": true,
+        "**/public": true,
+        "**/.deploy_git": true,
+        "**/rethinkdb_data": true,
+        "**/lcov-report": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.statusBar.visible": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "'Fira Code'",
+    "terminal.integrated.fontLigatures": false,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.7,
+    "cSpell.enabledLanguageIds": [
+        "javascript",
+        "javascriptreact",
+        "markdown",
+        "html",
+        "vue",
+        "plaintext",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ],
+    "vscode_custom_css.imports": [
+        "file://Users/fritz/.vscode-styles.css"
+    ]
+}
