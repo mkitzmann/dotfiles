@@ -2,12 +2,19 @@
 {
     "window.fullScreenZenMode": false,
     "editor.tabSize": 2,
-    "editor.fontFamily": "'Fira Code'",
-    "editor.fontWeight": 400,
-    "editor.lineHeight": 24,
+    "editor.fontFamily": "'Fira Code', monospace",
+    "editor.fontSize": 12,
     "editor.wordWrap": true,
-    "editor.renderIndentGuides": true,
-    "editor.renderWhitespace": "boundary",
+    "editor.renderIndentGuides": false,
+    "files.autoSave": "onFocusChange",
+    "editor.minimap.enabled": true,
+    "workbench.activityBar.visible": true,
+    "editor.formatOnSave": false,
+    "workbench.colorCustomizations": {
+      "statusBar.background": "#333333",
+      "statusBar.noFolderBackground": "#333333",
+      "statusBar.debuggingBackground": "#263238"
+    },
     "eslint.autoFixOnSave": true,
     "eslint.run": "onSave",
     "files.associations": {
@@ -36,11 +43,12 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "workbench.statusBar.visible": true,
+    "workbench.colorTheme": "Symfony Dark",
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "'Fira Code'",
     "terminal.integrated.fontLigatures": false,
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.lineHeight": 1.7,
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.lineHeight": 1,
     "cSpell.enabledLanguageIds": [
         "javascript",
         "javascriptreact",
@@ -53,7 +61,23 @@
         "typescriptreact",
         "yml"
     ],
-    "vscode_custom_css.imports": [
-        "file://Users/fritz/.vscode-styles.css"
-    ]
+    "css.validate": false,
+    "scss.validate": false,
+    "less.validate": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "sync.gist": "5f0734cd4abaef22a87175f987ba4643",
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastUpload": "2018-06-17T19:44:02.400Z",
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
 }

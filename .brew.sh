@@ -52,7 +52,7 @@ brews=(
   mtr
   ncdu
   neofetch
-  nmap  
+  nmap
   node
   poppler
   postgresql
@@ -141,12 +141,12 @@ casks=(
   github
   handbrake
   iina
-  istat-server  
+  istat-server
   launchrocket
   # kap-beta
   qlprettypatch
   qlimagesize
-  epubquicklook 
+  epubquicklook
   qlcolorcode
   qlmarkdown
   qlstephen
@@ -183,6 +183,11 @@ casks=(
   logitech-gaming-software
   dash
   alfred
+  nucleo
+  vanilla
+  sequel-pro
+  teamviewer
+  blender
 )
 
 pips=(
@@ -205,18 +210,57 @@ npms=(
 )
 
 vscode=(
-  alanz.vscode-hie-server
-  rebornix.Ruby
-  redhat.java
-  rust-lang.rust
-  scalameta.metals
+  Cronos87.symfony-snippets-0.1.1
+  grapecity.gc-excelviewer-2.1.32
+  nickytonline.vscode-gatsby-snippets-1.1.2
+  Rubymaniac.vscode-paste-and-indent-0.0.8
+  hookyqr.beautify-1.4.9
+  ntb.theme-symfony-dark-0.1.0
+  alefragnani.project-manager-10.3.2
+  hookyqr.beautify-1.5.0
+  octref.vetur-0.16.2
+  bajdzis.vscode-twig-pack-1.0.0
+  ikappas.phpcs-1.0.5
+  octref.vetur-0.17.1
+  christian-kohler.path-intellisense-1.4.2
+  killalau.vscode-liquid-snippets-1.2.0
+  phproberto.vscode-php-getters-setters-1.2.3
+  coenraads.bracket-pair-colorizer-1.0.61
+  mblode.twig-language-2-0.5.2
+  redhat.vscode-yaml-0.3.0
+  esbenp.prettier-vscode-1.8.1
+  mblode.twig-language-2-0.8.8
+  redhat.vscode-yaml-0.4.1
+  esbenp.prettier-vscode-1.9.0
+  michelemelluso.code-beautifier-2.1.0
+  ritwickdey.liveserver-5.5.1
+  felixfbecker.php-intellisense-2.3.10
+  michelemelluso.code-beautifier-2.2.1
+  ritwickdey.liveserver-5.6.1
+  formulahendry.auto-close-tag-0.5.6
+  mrmlnc.vscode-apache-1.2.0
+  robinbentley.sass-indented-1.5.1
+  formulahendry.auto-rename-tag-0.0.15
+  mrmlnc.vscode-scss-0.6.2
+  shan.code-settings-sync-3.2.5
+  formulahendry.auto-rename-tag-0.1.0
+  ms-ceintl.vscode-language-pack-de-1.31.4
+  shan.code-settings-sync-3.2.7
+  ginfuru.ginfuru-vscode-jekyll-syntax-0.1.0
+  msjsdiag.vscode-react-native-0.9.3
+  vsmobile.vscode-react-native-0.8.0
+  ginfuru.vscode-jekyll-snippets-0.9.1
+  naumovs.color-highlight-2.3.0
+  whatwedo.twig-1.0.2
+  grapecity.gc-excelviewer-2.1.29
+  neilding.language-liquid-0.1.1
 )
 
 fonts=(
   font-fira-code
   font-source-code-pro
   font-sourcecodepro-nerd-font
-  font-source-code-pro 
+  font-source-code-pro
   font-source-code-pro-for-powerline
   font-source-sans-pro
   font-terminus-nerd-font
@@ -224,20 +268,20 @@ fonts=(
   font-anonymous-pro
   font-dejavu-sans-mono-for-powerline
   font-droid-sans
-  font-droid-sans-mono 
+  font-droid-sans-mono
   font-droid-sans-mono-for-powerline
-  font-meslo-lg 
+  font-meslo-lg
   font-input
-  font-inconsolata 
+  font-inconsolata
   font-inconsolata-for-powerline
-  font-liberation-mono 
+  font-liberation-mono
   font-liberation-mono-for-powerline
   font-liberation-sans
   font-meslo-lg
   font-nixie-one
   font-office-code-pro
   font-pt-mono
-  font-raleway 
+  font-raleway
   font-roboto
   font-open-sans
   font-nunito-sans
@@ -278,10 +322,10 @@ function install {
 
 function brew_install_or_upgrade {
   if brew ls --versions "$1" >/dev/null; then
-    if (brew outdated | grep "$1" > /dev/null); then 
+    if (brew outdated | grep "$1" > /dev/null); then
       echo "Upgrading already installed package $1 ..."
       brew upgrade "$1"
-    else 
+    else
       echo "Latest $1 is already installed"
     fi
   else
