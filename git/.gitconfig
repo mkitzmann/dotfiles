@@ -10,3 +10,5 @@
 	ls = status
 	d = difftool
 	p = pull
+[core]
+	editor = vim
